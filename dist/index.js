@@ -4,7 +4,8 @@
 import fs from "fs-extra";
 import path from "path";
 import crypto from "crypto";
-const ROOT = path.join(process.cwd(), "src");
+const args = process.argv.slice(2);
+const ROOT = args[0] ? path.resolve(args[0]) : path.join(process.cwd(), "src");
 const HASH_STORE = path.join(process.cwd(), ".page-hashes.json");
 // 1️⃣ Load previous hash data (or empty)
 const oldHashes = fs.existsSync(HASH_STORE)
