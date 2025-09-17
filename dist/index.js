@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+"use strict";
 // checkPages.ts
 import fs from "fs-extra";
 import path from "path";
